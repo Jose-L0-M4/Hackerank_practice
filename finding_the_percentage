@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    n = int(input())
+    student_marks = {}
+    for _ in range(n):
+        name, *line = input().split()
+        scores = list(map(float, line))
+        student_marks[name] = scores
+    query_name = input()
+    
+    x = student_marks[query_name]
+    b = str(sum(x)/len(x))+"0"
+    if len(b) > 5:
+        print(round(sum(x)/len(x),2))
+    else:
+        print(b)
