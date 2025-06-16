@@ -1,0 +1,36 @@
+if __name__ == '__main__':
+    N = int(input())
+    list1 = []
+    for i in range(N):
+        CMD = input()   
+        stack = []
+        
+        if CMD == "print":
+            print(list1)
+            
+        elif CMD == "pop":
+            list1.pop()
+            
+        elif CMD == "sort":
+            list1.sort()
+            
+        elif CMD == "reverse":
+            list1.reverse()
+            
+        elif "append" in CMD:
+            stack = CMD.split(" ")
+            list1.append(int(stack[1]))
+            
+        elif "remove" in CMD:
+            stack = CMD.split(" ")
+            list1.remove(int(stack[1]))
+            
+        else:
+            stack = CMD.split(" ")
+            list1.insert(int(stack[1]),int(stack[-1]))
+            
+            
+            
+
+    
+    
